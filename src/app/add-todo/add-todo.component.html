@@ -1,0 +1,19 @@
+<!-- <p>add-todo works!</p> -->
+<div class="text-center">
+    <h5>Form For adding Todo</h5>
+    <form (ngSubmit)="onSubmit()">
+        <div class="row">
+          <div class="col-6">
+            <label for="title" class="mb-2"><b>Enter Title</b> </label>
+            <input type="text" [(ngModel)]="title" class="form-control mb-5" name="title" placeholder="Enter Todo Title" id="title" >
+          </div>
+          <div class="col -6">
+             <label for="title" class="mb-2"><b>Enter Description</b> </label>
+            <input type="text" [(ngModel)]="desc" class="form-control mb-5" placeholder="Describe your task" name="desc" id="title" >
+          </div>
+        </div>
+        <input type="submit" value="Add Todo" id="newtodo" class="btn btn-primary" >
+
+      </form>
+</div>
+ 

@@ -1,0 +1,19 @@
+<!-- <p>todo-component works!</p> -->
+<!-- <div class="flex-container"> -->
+  <div class="text-center mb-5">
+    <h1>Todo Simple List:</h1>
+  </div>
+<app-add-todo (addItem)="addItemParent($event) " ></app-add-todo>
+<h4>Your Todo List:</h4>
+<div class="" *ngIf="this.todoArray.length===0;else elseBlock">
+  <h5 class="container text-center">No Todo to display</h5>
+</div>
+<ng-template #elseBlock>
+  <ul *ngFor="let todo of todoArray">
+    <app-todo-special-component [todoObj]="todo" (deleteItem)="deleteItemParent($event)" (todoCheckBox)="doneParent($event)"></app-todo-special-component>
+
+
+  </ul>
+</ng-template>
+<!-- </div> -->
+<!-- <app-todo-component ></app-todo-component> -->

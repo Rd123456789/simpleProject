@@ -1,0 +1,16 @@
+<!-- <p>todo-special-component works!</p> -->
+<h3 [ngClass]="{'strike':!todoObj.active}">{{todoObj.title}}</h3>
+<h6 [ngClass]="{'strike':!todoObj.active}">{{todoObj.desc}}</h6>
+<div class="row">
+    <div class="col-12 mb-3 ">
+        <input class="form-check-input " type="checkbox" id="gridCheck" (click)="onCheck(todoObj)">
+        <label class="form-check-label mx-2" for="gridCheck">
+          Mark As Donw
+        </label>
+    </div>
+    <div class="col-12">
+    <button class="btn btn-success btn-sm" (click)="methodClick(todoObj)">
+        Delete
+    </button>
+</div>
+</div>
